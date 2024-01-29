@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload an Image</title>
+</head>
+<body>
+    <h1>Upload an Image</h1>
+    <form method="POST" action="/process_image" enctype="multipart/form-data">
+        <input type="file" name="image"> <!-- Change "file" to "image" -->
+        <input type="submit" value="Upload and Process">
+    </form>
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+</body>
+</html>

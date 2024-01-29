@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Background Removed</title>
+    <style>
+        /* CSS style to adjust the size of the displayed image */
+        .result-image {
+            width: 50%; /* Set the width of the image to 50% of the container */
+            height: auto; /* Maintain the aspect ratio */
+            max-width: 500px; /* Set the maximum width of the image */
+        }
+    </style>
+</head>
+<body>
+    <h1>Background Removed</h1>
+    <img src="{{ url_for('download_masked_image', filename=result_filename) }}" alt="Background Removed Image" class="result-image">
+    <br>
+    <a href="{{ url_for('download_masked_image', filename=result_filename) }}" download>Download Background Removed Image</a>
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>
